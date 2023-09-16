@@ -1,0 +1,16 @@
+#define sources in dbt project
+
+version: 2
+
+sources:
+  - name: postgres
+    database: RAW
+    schema: PUBLIC
+    tables:
+      - name: products
+      - name: promos  
+      - name: events
+      - name: users
+      - name: addresses
+      - name: orders
+      - name: order_items
