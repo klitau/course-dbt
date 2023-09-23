@@ -12,7 +12,8 @@ models:
         description: Product price
       - name: inventory
         description: Inventory Count
-        
+
+
   - name: stg_postgres__promos
     description: This is a dictionary of promos
     columns:
@@ -23,14 +24,49 @@ models:
       - name: promo_status
         description: Promo status
 
+
   - name: stg_postgres__addresses
     description: This is a dictionary of addresses
+    columns:
+      - name: address_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: zipcode
+        description: ""
+        tests:
+          - not_null
+
 
   - name: stg_postgres__events
     description: This is a dictionary of events
+    columns:
+      - name: event_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: user_id
+        description: ""
+        tests: 
+          - relationships:
+              to: ref('stg_postgres__users')
+              field: user_id
+      - name: event_type
+        description: ""
+        tests:
+          - accepted_values:
+              values:
+                - checkout
+                - package_shipped
+                - add_to_cart
+                - page_view
+
 
   - name: stg_postgres__order_items
     description: This is a dictionary of order items 
+
 
   - name: stg_postgres__orders
     description: This is a dictionary of orders
