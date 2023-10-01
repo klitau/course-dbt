@@ -1,5 +1,5 @@
 # Part 1
-***Q: What is our user repeat rate?
+*** Q: What is our user repeat rate?
 
 Repeat Rate = Users who purchased 2 or more times / users who purchased
 ```
