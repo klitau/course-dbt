@@ -1,4 +1,4 @@
-# Week 3 questions and ansers
+# Week 3 questions and answers
 
 ## Part 1: 
 A: Overall Conversion Rate is 62.5% and the converison rate by product
@@ -11,8 +11,10 @@ select
     ) / count(distinct session_id) as conversion_rate
 from
     dev_db.dbt_kristinalitauaudibenede.fact_page_views;
+```
 
-
+Conversion by Product
+```
 select
     pv.product_id,
     p.product_name,
@@ -28,7 +30,7 @@ from
 ```
 ## Part 6:
 A: 4 products changed since the last snapshot: 
-Philodendron
-Pothos
-Monstera
+Philodendron,
+Pothos,
+Monstera,
 String of pearls 
