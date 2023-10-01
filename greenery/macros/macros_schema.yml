@@ -1,0 +1,13 @@
+version: 2
+
+macros:
+  - name: sum_of
+    description: Aggregates and sums column based on the values available
+    arguments:
+      - name: col_name
+        description: target column name
+      - name: col_value
+        description: target column value
+  
+  - name: grant
+    description: grants usage on some schema for some role

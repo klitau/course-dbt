@@ -70,6 +70,14 @@ models:
 
   - name: stg_postgres__orders
     description: This is a dictionary of orders
+    columns: 
+      - name: order_total
+        description: ""
+        tests:
+         - dbt_utils.accepted_range:
+            min_value: 0
+            max_value: 10000
+
 
   - name: stg_postgres__users
     description: This is a dictionary of users
