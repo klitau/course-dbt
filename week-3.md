@@ -28,6 +28,9 @@ from
     left join dev_db.dbt_kristinalitauaudibenede.stg_postgres__products as p on pv.product_id=p.product_id
     group by 1,2;
 ```
+
+![Alt text](image-1.png)
+
 ## Part 2: Create a macro to simplify part of a model
 Created a macro "sum_of" that allows to write simple case statements based on the values available for the selected column and sum over the different values.
 
