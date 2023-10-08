@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+
+  - name: product_funnel
+    label: Product Funnel of Greenery data
+    type: dashboard
+    maturity: high
+    url: https://app.sigmacomputing.com/corise-dbt/workbook/Dashoard_Funnel-View_Kristina-3TAzyexEJzpwTakV4GDofp
+    description: >
+      This dashboard shows product funnel for Greenery data
+
+    depends_on:
+      - ref('fact_page_views')
+
+    owner:
+      name: Kristina Litau
+      email: someemail@email.com
